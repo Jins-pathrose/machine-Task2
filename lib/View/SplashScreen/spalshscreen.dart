@@ -43,19 +43,20 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
   }
 
   Future<void> _checkLoginStatus() async {
-    final prefs = await SharedPreferences.getInstance();
-    final isLoggedIn = prefs.getBool('isLoggedIn') ?? false;
+  final prefs = await SharedPreferences.getInstance();
+  final isLoggedIn = prefs.getBool('isLoggedIn') ?? false;
 
-    await Future.delayed(const Duration(seconds: 3));
+  await Future.delayed(const Duration(seconds: 3));
 
-    if (mounted) {
-      Navigator.of(context).pushReplacement(
-        MaterialPageRoute(
-          builder: (context) => isLoggedIn ? const HomePage() : const LoginPage(),
-        ),
-      );
-    }
+  if (mounted) {
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(
+        builder: (context) => isLoggedIn ? const HomePage() : const LoginPage(),
+      ),
+    );
   }
+}
+
 
   @override
   void dispose() {

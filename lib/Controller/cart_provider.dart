@@ -51,12 +51,8 @@ class CartProvider extends ChangeNotifier {
       if (currentQuantity > 1) {
         _quantities[product.id] = currentQuantity - 1;
       } else {
-        // Optional: remove the item when quantity becomes zero
+        // Remove the item when quantity becomes zero
         removeItem(product);
-        // return;
-        
-        // Or keep minimum quantity as 1
-        _quantities[product.id] = 1;
       }
       notifyListeners();
     }

@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:machinetask/Controller/cart_provider.dart';
-import 'package:machinetask/View/LoginPage/loginpage.dart';
+import 'package:machinetask/Controller/home_provider.dart';
 import 'package:machinetask/View/SplashScreen/spalshscreen.dart';
 import 'package:provider/provider.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  
   runApp(
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => CartProvider()),
+                ChangeNotifierProvider(create: (_) => HomeProvider()),
+
       ],
       child: MyApp(),
     ),

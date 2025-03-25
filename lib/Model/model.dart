@@ -23,7 +23,7 @@ final List<ShoeProduct> dummyProducts = [
     name: 'Air Max 270',
     image: 'assets/mt1.jpeg',
     price: 149.99,
-    description: 'The Nike Air Max 270 delivers a plush ride...',
+    description: 'The Nike Air Max 270 delivers a plush ride...Experience incredible energy return with the Ultraboost 21. The responsive Boost midsole and Primeknit+ upper adapt to your foot for a comfortable fit that helps you push your run forward.',
   ),
   ShoeProduct(
     id: '2',
